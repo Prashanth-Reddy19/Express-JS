@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <style>
+        .body{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .main{
+            padding: 1rem;
+        }
+        .main-header{
+            width: 100%;
+            height: 3.5rem;
+            background-color: aqua;
+            padding: 0 2rem;
+        }
+        .main-header-nav{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .main-header-item-list{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    
+        .main-header-item{
+            margin: 0 1rem;
+            padding: 0;
+        }
+        .main-header-item a{
+            text-decoration: none;
+            color:black;
+        }
+        .main-header__item a:hover,
+        .main-header__item a:active,
+        .main-header__item a:active{
+            color: red;
+        }
+        .product-form{
+            width: 20rem;
+            max-width: 90%;
+            margin: auto;
+        }
+        .form-control{
+            margin: 1rem;
+            text-align: center;
+        }
+        .form-control-label,
+        .form-input-control{
+            display: block;
+            width: 100%;
+        }
+        .form-control-input{
+            border: 1px solid #dbc441;
+            font: inherit;
+            border-radius: 2px;
+        }
+        button{
+            font: inherit;
+            border: 1px solid #dbdbdb;
+            color: #dbc441;
+            background-color: white;
+            border-radius: 3px;
+            cursor: pointer;
+
+        }
+        .button:hover,
+        .button:active{
+            background-color: #012001;
+            color: greenyellow;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header-nav">
+            <ul class="main-header-item-list">
+                <li class="main-header-item"><a  href="/">Shop</a></li>
+                <li class="main-header-item"><a href="/add-product">Add Product</a></li>
+                <li class="main-header-item"><a href="/contactus">contactUs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       
+        <form class="form-control" action="/success" method="POST">
+            <label>username</label><br>
+            <input type="text" name="username"><br>
+            <label>Email</label><br>
+            <input type="text" name="emailid"><br><br>
+            <button type="submit">submit</button>
+        </form>
+        
+            
+       
+    </main>
+</body>
+</html>
