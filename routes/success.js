@@ -2,19 +2,14 @@ const path = require('path');
 
 const express = require('express');
 
-const rootDir = require('../util/path');
+const successController=require('../controllers/successfull')
 
 const router = express.Router();
 
 // /admin/add-product => GET
-router.get('/success', (req, res, next) => {
-  res.sendFile(path.join(rootDir, 'views', 'success.html'));
-});
+router.get('/success', successController.getSuccessfull);
 
 // /admin/add-product => POST
-router.post('/success', (req, res, next) => {
-  console.log(req.body);
-  res.redirect('/success');
-});
+router.post('/success', successController.postSuccessfull);
 
 module.exports=router
